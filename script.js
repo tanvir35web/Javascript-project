@@ -10,4 +10,3 @@ document.getElementById('javascript').innerHTML = "<b>" + sum+"</b> <br> "+minus
  
  console.log(multiply);
  
- 
