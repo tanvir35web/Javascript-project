@@ -1,12 +1,11 @@
-var x, y, sum, minus, multiply;
-x = 5;
-y = 8;
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
 
-sum = x + y;
-minus= x - y;
-multiply = x * y;
-
-document.getElementById('javascript').innerHTML = "<b>" + sum+"</b> <br> "+minus;
- 
- console.log(multiply);
- 
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
