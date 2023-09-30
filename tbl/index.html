@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    table table-strip {
+            border: 1px solid white;
+            padding: 20px;
+            text-align: left;
+            margin: 10px;
+            
+           
+        }
+
+        table {
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            width: 100%;
+            border: 1px solid white;
+            border-collapse: collapse;
+            
+
+        }
+
+        .big-info{
+            color: rgb(152, 0, 0);
+            font-size: 25px;
+        }
+</style>
+
+    <table class="table table-strip">
+        <tr class="big-info">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Birthday</th>
+        </tr>
+
+        <tbody id="myTable">
+
+        </tbody>
+    </table>
+
+
+    <script>
+        var myArray = [{'name': 'Michal', 'age':'30', 'birthday': '10/11/2020'},
+        {'name': 'Tanvir', 'age':'23', 'birthday': '23/11/1999'},
+        {'name': 'Tarek', 'age':'29', 'birthday': '05/08/1995'},{'name': 'Rakib', 'age':'36', 'birthday': '13/11/2000'}]
+
+        buildTable(myArray)
+
+        function buildTable(data){
+            var table = document.getElementById('myTable')
+            
+            for(var i = 0; i < myArray.length; i++){
+                var row = `<tr>
+                                <td>${data[i].name}</td>
+                                <td>${data[i].age}</td>
+                                <td>${data[i].birthday}</td>
+                    
+                           </tr>`
+
+                           table.innerHTML += row
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
